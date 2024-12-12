@@ -3,7 +3,7 @@ namespace Yinyang;
 /// <summary>
 /// Specifies the polarity of yinyang elements.
 /// </summary>
-public enum YinyangPolarity
+public enum Polarity
 {
     /// <summary>
     /// The yin element.
