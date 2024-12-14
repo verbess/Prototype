@@ -18,5 +18,5 @@ public enum Polarity
     /// <summary>
     /// The yang element.
     /// </summary>
-    Yang = 1
+    Yang = 1,
 }
