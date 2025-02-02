@@ -8,7 +8,32 @@ public interface IYinyang
     /// <summary>
     /// Defines the default yinyang value of taiji polarity, which is "0".
     /// </summary>
-    public const int DefaultTaijiYinyangValue = 0;
+    public const int DefaultTaijiCharge = 0;
+
+    /// <summary>
+    /// Gets or sets the current yinyang value of the object.
+    /// </summary>
+    public int Charge { get; set; }
+
+    /// <summary>
+    /// Gets or sets the yin threshold value of the object.
+    /// </summary>
+    public int YinThreshold { get; set; }
+
+    /// <summary>
+    /// Gets or sets the yang threshold value of the object.
+    /// </summary>
+    public int YangThreshold { get; set; }
+
+    /// <summary>
+    /// Gets or sets the yin extremum value of the object.
+    /// </summary>
+    public int YinJi { get; set; }
+
+    /// <summary>
+    /// Gets or sets the yang extremum value of the object.
+    /// </summary>
+    public int YangJi { get; set; }
 
     /// <summary>
     /// Gets or inits the initial yinyang polarity of the object.
@@ -19,35 +44,10 @@ public interface IYinyang
     /// Gets the current yinyang polarity of the object.
     /// </summary>
     public Polarity CurrentPolarity =>
-        YinyangValue switch
+        Charge switch
         {
-            < DefaultTaijiYinyangValue => Polarity.Yin,
-            DefaultTaijiYinyangValue => Polarity.Taiji,
-            > DefaultTaijiYinyangValue => Polarity.Yang,
+            < DefaultTaijiCharge => Polarity.Yin,
+            > DefaultTaijiCharge => Polarity.Yang,
+            _ => Polarity.Taiji,
         };
-
-    /// <summary>
-    /// Gets or sets the current yinyang value of the object.
-    /// </summary>
-    public int YinyangValue { get; set; }
-
-    /// <summary>
-    /// Gets or sets the yin threshold value of the object.
-    /// </summary>
-    public int YinThresholdValue { get; set; }
-
-    /// <summary>
-    /// Gets or sets the yang threshold value of the object.
-    /// </summary>
-    public int YangThresholdValue { get; set; }
-
-    /// <summary>
-    /// Gets or sets the yin limit value of the object.
-    /// </summary>
-    public int YinLimitValue { get; set; }
-
-    /// <summary>
-    /// Gets or sets the yang limit value of the object.
-    /// </summary>
-    public int YangLimitValue { get; set; }
 }
