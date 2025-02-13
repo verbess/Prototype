@@ -1,9 +1,9 @@
-namespace Yinyang;
+namespace YinYang;
 
 /// <summary>
 /// Defines methods for units.
 /// </summary>
-public interface IUnit : IYinyang
+public interface IUnit : IYinYang
 {
     /// <summary>
     /// Gets or inits the id of the unit.
