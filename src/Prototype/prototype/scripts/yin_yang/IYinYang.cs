@@ -21,21 +21,33 @@ public interface IYinYang
     /// <summary>
     /// Gets or sets the yin threshold value of the object.
     /// </summary>
-    public int YinYu { get; set; }
+    /// <remarks>
+    /// 阴持，“持”字源自《黄帝内经》“持满御神”概念，指保持适度状态，对应现代医学的“稳态维持”。
+    /// </remarks>
+    public int YinChi { get; set; }
 
     /// <summary>
     /// Gets or sets the yang threshold value of the object.
     /// </summary>
-    public int YangYu { get; set; }
+    /// /// <remarks>
+    /// 阳持，“持”字源自《黄帝内经》“持满御神”概念，指保持适度状态，对应现代医学的“稳态维持”。
+    /// </remarks>
+    public int YangChi { get; set; }
 
     /// <summary>
     /// Gets or sets the yin extremum value of the object.
     /// </summary>
+    /// <remarks>
+    /// 阴极，“极”字源自《素问》“重阴必阳”概念，指阴气达到物极必反的临界状态。
+    /// </remarks>
     public int YinJi { get; set; }
 
     /// <summary>
     /// Gets or sets the yang extremum value of the object.
     /// </summary>
+    /// <remarks>
+    /// 阳极，“极”字源自《素问》“重阳必阴”概念，指阳气达到物极必反的临界状态。
+    /// </remarks>
     public int YangJi { get; set; }
 
     /// <summary>
