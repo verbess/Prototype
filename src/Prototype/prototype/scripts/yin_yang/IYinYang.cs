@@ -51,12 +51,12 @@ public interface IYinYang
     public int YangJi { get; set; }
 
     /// <summary>
-    /// Gets or inits the initial yin yang polarity of the object.
+    /// Gets or inits the initial polarity of the object.
     /// </summary>
     public Polarity InitialPolarity { get; init; }
 
     /// <summary>
-    /// Gets the current yin yang polarity of the object.
+    /// Gets the current polarity of the object.
     /// </summary>
     public Polarity CurrentPolarity =>
         Qi switch
