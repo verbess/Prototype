@@ -67,11 +67,22 @@ public interface IYinYang
         };
 
     /// <summary>
-    /// Sets the yin yang thresholds of the object.
+    /// Indicates whether the yin yang threshold values of the object are valid.
     /// </summary>
-    /// <param name="yinJi">The yin extremum value of the object.</param>
-    /// <param name="yinChi">The yin threshold value of the object.</param>
-    /// <param name="yangChi">The yang threshold value of the object.</param>
-    /// <param name="yangJi">The yang extremum value of the object.</param>
+    /// <param name="yinJi">The yin extremum value of the object to test.</param>
+    /// <param name="yinChi">The yin threshold value of the object to test.</param>
+    /// <param name="yangChi">The yang threshold value of the object to test.</param>
+    /// <param name="yangJi">The yang extremum value of the object to test.</param>
+    /// <returns><c>true</c> if the thresholds are valid; otherwise, <c>false</c>.</returns>
+    public static bool AreThresholdsValid(int yinJi, int yinChi, int yangChi, int yangJi) =>
+        (yinJi <= yinChi) && (yinChi <= DefaultTaiJiQi) && (DefaultTaiJiQi <= yangChi) && (yangChi <= yangJi);
+
+    /// <summary>
+    /// Sets the yin yang threshold values of the object.
+    /// </summary>
+    /// <param name="yinJi">The yin extremum value of the object to set.</param>
+    /// <param name="yinChi">The yin threshold value of the object to set.</param>
+    /// <param name="yangChi">The yang threshold value of the object to set.</param>
+    /// <param name="yangJi">The yang extremum value of the object to set.</param>
     public void SetThresholds(int yinJi, int yinChi, int yangChi, int yangJi);
 }
