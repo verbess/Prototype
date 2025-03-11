@@ -19,36 +19,36 @@ public interface IYinYang
     public int Qi { get; set; }
 
     /// <summary>
-    /// Gets or sets the yin threshold value of the object.
+    /// Gets the yin threshold value of the object.
     /// </summary>
     /// <remarks>
     /// 阴持，“持”字源自《黄帝内经》“持满御神”概念，指保持适度状态，对应现代医学的“稳态维持”。
     /// </remarks>
-    public int YinChi { get; set; }
+    public int YinChi { get; }
 
     /// <summary>
-    /// Gets or sets the yang threshold value of the object.
+    /// Gets the yang threshold value of the object.
     /// </summary>
     /// <remarks>
     /// 阳持，“持”字源自《黄帝内经》“持满御神”概念，指保持适度状态，对应现代医学的“稳态维持”。
     /// </remarks>
-    public int YangChi { get; set; }
+    public int YangChi { get; }
 
     /// <summary>
-    /// Gets or sets the yin extremum value of the object.
+    /// Gets the yin extremum value of the object.
     /// </summary>
     /// <remarks>
     /// 阴极，“极”字源自《素问》“重阴必阳”概念，指阴气达到物极必反的临界状态。
     /// </remarks>
-    public int YinJi { get; set; }
+    public int YinJi { get; }
 
     /// <summary>
-    /// Gets or sets the yang extremum value of the object.
+    /// Gets the yang extremum value of the object.
     /// </summary>
     /// <remarks>
     /// 阳极，“极”字源自《素问》“重阳必阴”概念，指阳气达到物极必反的临界状态。
     /// </remarks>
-    public int YangJi { get; set; }
+    public int YangJi { get; }
 
     /// <summary>
     /// Gets or inits the initial polarity of the object.
@@ -65,4 +65,13 @@ public interface IYinYang
             > DefaultTaiJiQi => Polarity.Yang,
             _ => Polarity.TaiJi,
         };
+
+    /// <summary>
+    /// Sets the yin yang thresholds of the object.
+    /// </summary>
+    /// <param name="yinJi">The yin extremum value of the object.</param>
+    /// <param name="yinChi">The yin threshold value of the object.</param>
+    /// <param name="yangChi">The yang threshold value of the object.</param>
+    /// <param name="yangJi">The yang extremum value of the object.</param>
+    public void SetThresholds(int yinJi, int yinChi, int yangChi, int yangJi);
 }
