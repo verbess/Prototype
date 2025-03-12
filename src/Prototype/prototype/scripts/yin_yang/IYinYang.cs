@@ -51,7 +51,7 @@ public interface IYinYang
     public int YangJi { get; }
 
     /// <summary>
-    /// Gets or inits the initial polarity of the object.
+    /// Gets or initializes the initial polarity of the object.
     /// </summary>
     public Polarity InitialPolarity { get; init; }
 
@@ -78,11 +78,12 @@ public interface IYinYang
         (yinJi <= yinChi) && (yinChi <= DefaultTaiJiQi) && (DefaultTaiJiQi <= yangChi) && (yangChi <= yangJi);
 
     /// <summary>
-    /// Sets the yin yang threshold values of the object.
+    /// Attempts to set the yin yang threshold values of the object.
     /// </summary>
     /// <param name="yinJi">The yin extremum value of the object to set.</param>
     /// <param name="yinChi">The yin threshold value of the object to set.</param>
     /// <param name="yangChi">The yang threshold value of the object to set.</param>
     /// <param name="yangJi">The yang extremum value of the object to set.</param>
-    public void SetThresholds(int yinJi, int yinChi, int yangChi, int yangJi);
+    /// <returns><c>true</c> if the yin yang threshold values were set successfully; otherwise, <c>false</c>.</returns>
+    public bool TrySetThresholds(int yinJi, int yinChi, int yangChi, int yangJi);
 }
