@@ -7,10 +7,9 @@ internal static class Messages
 {
     #region Argument exceptions
     /// <summary>
-    /// Invalid thresholds order. Required order: YinJi ({0}) <= YinChi ({1}) <= DefaultTaiJiQi ({2}) <= YangChi ({3})
-    /// <= YangJi ({4}).
+    /// Invalid thresholds order. Required order: YinJi <= YinChi <= TaiJi <= YangChi <= YangJi.
     /// </summary>
     internal const string Argument_InvalidThresholdsOrder =
-        @"Invalid thresholds order. Required order: YinJi ({0}) <= YinChi ({1}) <= DefaultTaiJiQi ({2}) <= YangChi ({3}) <= YangJi ({4}).";
+        @"Invalid thresholds order. Required order: YinJi <= YinChi <= TaiJi <= YangChi <= YangJi.";
     #endregion
 }
