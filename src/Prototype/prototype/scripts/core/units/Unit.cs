@@ -24,7 +24,16 @@ public abstract partial class Unit(int id, int qi) : Node, IUnit
     {
         if (!TrySetThresholds(yinJi, yinChi, yangChi, yangJi))
         {
-            throw new ArgumentException();
+            throw new ArgumentException(
+                string.Format(
+                    Messages.Argument_InvalidThresholdsOrder,
+                    nameof(yinJi),
+                    nameof(yinChi),
+                    nameof(IYinYang.DefaultTaiJiQi),
+                    nameof(yangChi),
+                    nameof(yangJi)
+                )
+            );
         }
     }
 
