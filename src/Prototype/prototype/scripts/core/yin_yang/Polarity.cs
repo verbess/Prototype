@@ -1,7 +1,7 @@
-namespace YinYang;
+namespace Yinyang;
 
 /// <summary>
-/// Specifies the polarity of yin yang elements.
+/// Specifies the polarity of yinyang elements.
 /// </summary>
 public enum Polarity
 {
@@ -11,9 +11,9 @@ public enum Polarity
     Yin = -1,
 
     /// <summary>
-    /// The tai ji element, when qi is in the neutral balance.
+    /// The taiji element, when qi is in the neutral balance.
     /// </summary>
-    TaiJi = 0,
+    Taiji = 0,
 
     /// <summary>
     /// The yang element, when qi is positive.
