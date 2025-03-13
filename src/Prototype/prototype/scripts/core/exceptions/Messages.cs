@@ -1,4 +1,4 @@
-namespace YinYang;
+namespace Yinyang;
 
 /// <summary>
 /// Serves as the resource class for exception error message constants.
@@ -7,9 +7,9 @@ internal static class Messages
 {
     #region Argument exceptions
     /// <summary>
-    /// Invalid thresholds order. Required order: YinJi <= YinChi <= TaiJi <= YangChi <= YangJi.
+    /// Thresholds must satisfy: Yinji <= Yinchi <= Taiji <= Yangchi <= Yangji.
     /// </summary>
     internal const string Argument_InvalidThresholdsOrder =
-        @"Invalid thresholds order. Required order: YinJi <= YinChi <= TaiJi <= YangChi <= YangJi.";
+        @"Thresholds must satisfy: Yinji <= Yinchi <= Taiji <= Yangchi <= Yangji.";
     #endregion
 }
