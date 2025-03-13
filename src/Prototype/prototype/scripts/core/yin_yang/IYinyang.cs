@@ -38,7 +38,7 @@ public interface IYinyang
     /// Gets the taiji value of the object.
     /// </summary>
     /// <remarks>
-    /// 太极，
+    /// 太极，一般是指宇宙最原始的秩序状态，出现于阴阳未分的混沌时期（无极）之后，而后形成万物（宇宙）的本源——混天太极。
     /// </remarks>
     public int Taiji { get; }
 
