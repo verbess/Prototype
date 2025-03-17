@@ -1,5 +1,13 @@
 {
     "files.exclude": {
         "**/*.uid": true
-    }
+    },
+    "cSpell.words": [
+        "Taiji",
+        "Yangchi",
+        "Yangji",
+        "Yinchi",
+        "Yinji",
+        "Yinyang"
+    ]
 }
