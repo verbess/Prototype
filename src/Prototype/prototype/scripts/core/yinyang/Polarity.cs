@@ -6,17 +6,17 @@ namespace Yinyang;
 public enum Polarity
 {
     /// <summary>
-    /// The yin polarity, when qi is negative.
+    /// The yin polarity, when <see cref="IYinyang.Qi" /> is negative.
     /// </summary>
     Yin = -1,
 
     /// <summary>
-    /// The taiji polarity, when qi is in the neutral balance.
+    /// The taiji polarity, when <see cref="IYinyang.Qi" /> is in the neutral balance.
     /// </summary>
     Taiji = 0,
 
     /// <summary>
-    /// The yang polarity, when qi is positive.
+    /// The yang polarity, when <see cref="IYinyang.Qi" /> is positive.
     /// </summary>
     Yang = 1,
 }
