@@ -1,63 +1,44 @@
 using Godot;
 
-namespace YinYang;
+namespace Yinyang;
 
+/// [TODO] May need a container to package this class and initialize the unit node at runtime.
+/// [WARN] Not ready for use. Intended as a temporary commit.
 /// <summary>
-///
+/// Represents the ultimate base class of all interactive units within the game.
 /// </summary>
-/// <param name="id"></param>
-/// <param name="qi"></param>
-public abstract partial class Unit(int id, int qi) : Node, IUnit
+public abstract partial class Unit(int id, int qi) : Node2D, IUnit
 {
-    /// <summary>
-    ///
-    /// </summary>
-    /// <param name="id"></param>
-    /// <param name="qi"></param>
-    /// <param name="yinJi"></param>
-    /// <param name="yinChi"></param>
-    /// <param name="yangChi"></param>
-    /// <param name="yangJi"></param>
-    /// <exception cref="ArgumentException"></exception>
-    protected Unit(int id, int qi, int yinJi, int yinChi, int yangChi, int yangJi)
-        : this(id, qi)
-    {
-        if (!TrySetThresholds(yinJi, yinChi, yangChi, yangJi))
-        {
-            throw new ArgumentException(Messages.Argument_InvalidThresholdsOrder);
-        }
-    }
-
     /// <inheritdoc />
     public int Id { get; init; } = id;
 
     /// <inheritdoc />
     public int Qi { get; set; } = qi;
 
-    /// <inheritdoc />
-    public int YinChi { get; protected set; }
+    /// <inheritdoc />>
+    public int Yinchi { get; protected set; }
 
     /// <inheritdoc />
-    public int YangChi { get; protected set; }
+    public int Yangchi { get; protected set; }
 
     /// <inheritdoc />
-    public int YinJi { get; protected set; }
+    public int Yinji { get; protected set; }
 
     /// <inheritdoc />
-    public int YangJi { get; protected set; }
+    public int Yangji { get; protected set; }
 
     /// <inheritdoc />
     public Polarity InitialPolarity { get; init; }
 
     /// <inheritdoc />
-    public bool TrySetThresholds(int yinJi, int yinChi, int yangChi, int yangJi)
+    public bool TrySetThresholds(int yinji, int yinchi, int yangchi, int yangji)
     {
-        if (IYinYang.AreThresholdsValid(yinJi, yinChi, yangChi, yangJi))
+        if (IYinyang.AreThresholdsValid(yinji, yinchi, yangchi, yangji))
         {
-            YinJi = yinJi;
-            YinChi = yinChi;
-            YangChi = yangChi;
-            YangJi = yangJi;
+            Yinji = yinji;
+            Yinchi = yinchi;
+            Yangchi = yangchi;
+            Yangji = yangji;
 
             return true;
         }
