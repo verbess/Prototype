@@ -1,12 +1,12 @@
-namespace YinYang;
+namespace Yinyang;
 
 /// <summary>
-/// Defines methods for units.
+/// Defines methods for all interactive units within the game.
 /// </summary>
-public interface IUnit : IYinYang
+public interface IUnit : IYinyang
 {
     /// <summary>
-    /// Gets or inits the id of the unit.
+    /// Gets or initializes the id of the unit.
     /// </summary>
     public int Id { get; init; }
 }
