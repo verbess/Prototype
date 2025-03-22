@@ -51,9 +51,9 @@ public interface IYinyang
     public int Yangji { get; }
 
     /// <summary>
-    /// Gets or initializes the initial polarity of the object.
+    /// Gets the initial polarity of the object.
     /// </summary>
-    public Polarity InitialPolarity { get; init; }
+    public Polarity InitialPolarity { get; }
 
     /// <summary>
     /// Gets the currents polarity of the object.
