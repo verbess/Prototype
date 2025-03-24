@@ -1,7 +1,7 @@
 namespace Yinyang;
 
 /// <summary>
-/// Defines methods for objects with yinyang elements.
+/// Defines methods for all objects with yinyang elements.
 /// </summary>
 public interface IYinyang
 {
