@@ -1,7 +1,7 @@
 namespace Yinyang;
 
 /// <summary>
-/// Specifies the polarity of yinyang elements.
+/// Represents the polarities of yinyang elements.
 /// </summary>
 public enum Polarity
 {
