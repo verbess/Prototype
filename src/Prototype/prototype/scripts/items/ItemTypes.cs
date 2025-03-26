@@ -4,7 +4,7 @@ namespace Yinyang.Items;
 /// Represents the types of items within the game.
 /// </summary>
 [Flags]
-public enum ItemType
+public enum ItemTypes
 {
     /// <summary>
     /// No item type.
