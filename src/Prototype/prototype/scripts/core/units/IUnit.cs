@@ -1,7 +1,7 @@
 namespace Yinyang;
 
 /// <summary>
-/// Defines methods for all interactive units within the game.
+/// Defines methods for all interactive objects within the game.
 /// </summary>
 public interface IUnit : IYinyang
 {

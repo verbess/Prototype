@@ -1,7 +1,7 @@
 namespace Yinyang;
 
 /// <summary>
-/// Defines methods for objects with yinyang elements.
+/// Defines methods for all objects with yinyang elements.
 /// </summary>
 public interface IYinyang
 {
@@ -56,7 +56,7 @@ public interface IYinyang
     public Polarity InitialPolarity { get; }
 
     /// <summary>
-    /// Gets the currents polarity of the object.
+    /// Gets the current polarity of the object.
     /// </summary>
     public Polarity CurrentPolarity =>
         Qi switch
@@ -73,7 +73,7 @@ public interface IYinyang
     /// <param name="yinchi">The yinyang value of the object's yinchi threshold to test.</param>
     /// <param name="yangchi">The yinyang value of the object's yangchi threshold to test.</param>
     /// <param name="yangji">The yinyang value of the object's yangji threshold to test.</param>
-    /// <returns><c>true</c> if the object's yinyang threshold value are valid; otherwise, <c>false</c>.</returns>
+    /// <returns><c>true</c> if the object's yinyang threshold values are valid; otherwise, <c>false</c>.</returns>
     public static bool AreThresholdsValid(int yinji, int yinchi, int yangchi, int yangji) =>
         (yinji <= yinchi) && (yinchi <= TaijiQi) && (TaijiQi <= yangchi) && (yangchi <= yangji);
 
