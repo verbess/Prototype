@@ -7,9 +7,9 @@ internal static class Messages
 {
     #region Argument exceptions
     /// <summary>
-    /// Thresholds must be ordered as: Yinji <= Yinchi <= 0 <= Yangchi <= Yangji.
+    /// Thresholds must be ordered as: Yinji ≦ Yinchi ≦ 0 ≦ Yangchi ≦ Yangji.
     /// </summary>
     internal const string Argument_ThresholdsOutOfOrder =
-        @"Thresholds must be ordered as: Yinji <= Yinchi <= 0 <= Yangchi <= Yangji.";
+        @"Thresholds must be ordered as: Yinji ≦ Yinchi ≦ 0 ≦ Yangchi ≦ Yangji.";
     #endregion
 }
