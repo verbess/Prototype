@@ -17,13 +17,13 @@
             <param name="key">The key of the data to get.</param>
             <param name="data">
             When this method returns, contains the data obtained from the data pool that has the specified key, or the
-            default value of the <see cref="T:Snake.IKeyed" /> if the operation failed.
+            default value of the <see cref="T:Snake.IKeyed"/> if the operation failed.
             </param>
             <returns><c>true</c> if the key was found in the data pool; otherwise, <c>false</c>.</returns>
         </member>
         <member name="M:Snake.DataPool.TryAdd(Snake.IKeyed)">
             <summary>
-            Attempts to add a data to the data pool.
+            Attempts to add data to the data pool.
             </summary>
             <param name="data">The data to add.</param>
             <returns>
@@ -47,7 +47,7 @@
             <param name="key">The key of the data to remove and return.</param>
             <param name="data">
             When this method returns, contains the data removed from the data pool that has the specified key, or the
-            default value of the <see cref="T:Snake.IKeyed" /> if the operation failed.
+            default value of the <see cref="T:Snake.IKeyed"/> if the operation failed.
             </param>
             <returns>
             <c>true</c> if the data was removed from the data pool successfully; otherwise, <c>false</c>.
@@ -70,7 +70,7 @@
             <param name="key">The key of the data to get.</param>
             <param name="data">
             When this method returns, contains the data obtained from the data container that has the specified key, or
-            the default value of the <see cref="T:Snake.IKeyed" /> if the operation failed.
+            the default value of the <see cref="T:Snake.IKeyed"/> if the operation failed.
             </param>
             <returns><c>true</c> if the key was found in the data container; otherwise, <c>false</c>.</returns>
         </member>
@@ -90,7 +90,7 @@
             <param name="key">The key of the data to remove and return.</param>
             <param name="data">
             When this method returns, contains the data removed from the data container that has the specified key, or
-            the default value of the <see cref="T:Snake.IKeyed" /> if the operation failed.
+            the default value of the <see cref="T:Snake.IKeyed"/> if the operation failed.
             </param>
             <returns>
             <c>true</c> if the data was removed from the data container successfully; otherwise, <c>false</c>.
@@ -118,24 +118,24 @@
         </member>
         <member name="T:Snake.SnakeException">
             <summary>
-            Serves as the base class for exceptions in the <see cref="N:Snake" /> namespace.
+            Serves as the base class for exceptions in the <see cref="N:Snake"/> namespace.
             </summary>
         </member>
         <member name="M:Snake.SnakeException.#ctor">
             <summary>
-            Initializes a new instance of the this class.
+            Initializes a new instance of this class.
             </summary>
         </member>
         <member name="M:Snake.SnakeException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the this class with a specified error message.
+            Initializes a new instance of this class with a specified error message.
             </summary>
             <param name="message">The message that describes the error.</param>
         </member>
         <member name="M:Snake.SnakeException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the this class with a specified error message and a reference to the inner
-            exception that is the cause of this exception.
+            Initializes a new instance of this class with a specified error message and a reference to the inner exception
+            that is the cause of this exception.
             </summary>
             <param name="message">The error message that explains the reason for the exception.</param>
             <param name="innerException">
@@ -185,7 +185,7 @@
             <param name="key">The key of the data to get.</param>
             <param name="data">
             When this method returns, contains the data obtained from the data module that has the specified key, or the
-            default value of the <typeparamref name="T" /> if the operation failed.
+            default value of the <typeparamref name="T"/> if the operation failed.
             </param>
             <returns><c>true</c> if the key was found in the data module; otherwise, <c>false</c>.</returns>
         </member>
@@ -197,13 +197,13 @@
             <param name="key">The key of the data to get.</param>
             <param name="data">
             When this method returns, contains the data obtained from the data module that has the specified key, or the
-            default value of the <see cref="T:Snake.IKeyed" /> if the operation failed.
+            default value of the <see cref="T:Snake.IKeyed"/> if the operation failed.
             </param>
             <returns><c>true</c> if the key was found in the data module; otherwise, <c>false</c>.</returns>
         </member>
         <member name="M:Snake.Data.IDataModule.TryAdd(Snake.IKeyed)">
             <summary>
-            Attempts to add a data to the data module.
+            Attempts to add data to the data module.
             </summary>
             <param name="data">The data to add.</param>
             <returns><c>true</c> if the data was added to the data module successfully; otherwise, <c>false</c>.</returns>
@@ -234,7 +234,7 @@
             <param name="key">The key of the data to remove and return.</param>
             <param name="data">
             When this method returns, contains the data removed from the data module that has the specified key, or the
-            default value of the <typeparamref name="T" /> if the operation failed.
+            default value of the <typeparamref name="T"/> if the operation failed.
             </param>
             <returns>
             <c>true</c> if the data was removed from the data module successfully; otherwise, <c>false</c>.
@@ -248,7 +248,7 @@
             <param name="key">The key of the data to remove and return.</param>
             <param name="data">
             When this method returns, contains the data removed from the data module that has the specified key, or the
-            default value of the <see cref="T:Snake.IKeyed" /> if the operation failed.
+            default value of the <see cref="T:Snake.IKeyed"/> if the operation failed.
             </param>
             <returns>
             <c>true</c> if the data was removed from the data module successfully; otherwise, <c>false</c>.
