@@ -1,4 +1,3 @@
-using Godot;
 using Snake;
 
 namespace Yinyang.Items;
@@ -6,8 +5,7 @@ namespace Yinyang.Items;
 /// <summary>
 /// Represents immutable static data for an item within the game.
 /// </summary>
-[GlobalClass]
-public sealed partial class ItemData : Resource, IKeyed
+public sealed record ItemData : IKeyed
 {
     /// <summary>
     /// Initializes a new instance of this class with the specified properties.
