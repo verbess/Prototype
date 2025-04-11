@@ -6,7 +6,7 @@ namespace Yinyang;
 public interface IUnit : IYinyang
 {
     /// <summary>
-    /// Gets the id of the unit.
+    /// Gets the unique identifier of the unit.
     /// </summary>
-    public int Id { get; }
+    public string Key { get; }
 }

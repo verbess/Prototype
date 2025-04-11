@@ -7,10 +7,10 @@ namespace Yinyang;
 /// <summary>
 /// Represents the ultimate base class of all interactive units within the game.
 /// </summary>
-public abstract partial class Unit(int id, int qi) : Node2D, IUnit
+public abstract partial class Unit(string key, int qi) : Node2D, IUnit
 {
     /// <inheritdoc />
-    public int Id { get; init; } = id;
+    public string Key { get; init; } = key;
 
     /// <inheritdoc />
     public int Qi { get; set; } = qi;
