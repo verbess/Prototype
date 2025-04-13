@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://catiqj7sql851"]
-
-[ext_resource type="Script" uid="uid://deyyk2jgfdamv" path="res://sandbox/scripts/Sandbox.cs" id="1_ik7w5"]
-
-[node name="World" type="Node2D"]
-script = ExtResource("1_ik7w5")
