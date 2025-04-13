@@ -25,6 +25,10 @@ public sealed record ItemData : IKeyed
         ArgumentNullException.ThrowIfNull(name);
         ArgumentNullException.ThrowIfNull(description);
         ArgumentNullException.ThrowIfNull(yinyangData);
+        if (key != yinyangData.Key)
+        {
+            throw new ArgumentException(nameof(key));
+        }
 
         Key = key;
         Name = name;
@@ -56,4 +60,29 @@ public sealed record ItemData : IKeyed
     /// Gets the price of the item within the game's currency.
     /// </summary>
     public int Price { get; }
+
+    /// <summary>
+    /// Gets the yinyang value of the item's yinchi threshold.
+    /// </summary>
+    public int Yinchi => _yinyangData.Yinchi;
+
+    /// <summary>
+    /// Gets the yinyang value of the item's yangchi threshold.
+    /// </summary>
+    public int Yangchi => _yinyangData.Yangchi;
+
+    /// <summary>
+    /// Gets the yinyang value of the item's yinji threshold.
+    /// </summary>
+    public int Yinji => _yinyangData.Yinji;
+
+    /// <summary>
+    /// Gets the yinyang value of the item's yangji threshold.
+    /// </summary>
+    public int Yangji => _yinyangData.Yangji;
+
+    /// <summary>
+    /// Gets the initial polarity of the item.
+    /// </summary>
+    public Polarity InitialPolarity => _yinyangData.InitialPolarity;
 }
