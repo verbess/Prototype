@@ -74,3 +74,4 @@ Temporary Items
 
 # Custom ignores
 *.sln
+src/Prototype/sandbox/
