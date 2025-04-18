@@ -78,6 +78,15 @@ public interface IYinyang
         (yinji <= yinchi) && (yinchi <= TaijiQi) && (TaijiQi <= yangchi) && (yangchi <= yangji);
 
     /// <summary>
+    /// Indicates whether the object's yinyang value is valid.
+    /// </summary>
+    /// <param name="qi">The yinyang value of the object to test.</param>
+    /// <param name="yinji">The yinyang value of the object's yinji threshold to test.</param>
+    /// <param name="yangji">The yinyang value of the object's yangji threshold to test.</param>
+    /// <returns><c>true</c> if the object's yinyang value is valid; otherwise, <c>false</c>.</returns>
+    public static bool IsQiValid(int qi, int yinji, int yangji) => (yinji <= qi) && (qi <= yangji);
+
+    /// <summary>
     /// Attempts to set the object's yinyang threshold values.
     /// </summary>
     /// <param name="yinji">The yinyang value of the object's yinji threshold to set.</param>
