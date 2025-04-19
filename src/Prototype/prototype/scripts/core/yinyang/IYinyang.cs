@@ -51,9 +51,9 @@ public interface IYinyang
     public int Yangji { get; }
 
     /// <summary>
-    /// Gets the initial polarity of the object.
+    /// Gets the original polarity of the object.
     /// </summary>
-    public Polarity InitialPolarity { get; }
+    public Polarity OriginalPolarity { get; }
 
     /// <summary>
     /// Gets the current polarity of the object.
@@ -76,6 +76,15 @@ public interface IYinyang
     /// <returns><c>true</c> if the object's yinyang threshold values are valid; otherwise, <c>false</c>.</returns>
     public static bool AreThresholdsValid(int yinji, int yinchi, int yangchi, int yangji) =>
         (yinji <= yinchi) && (yinchi <= TaijiQi) && (TaijiQi <= yangchi) && (yangchi <= yangji);
+
+    /// <summary>
+    /// Indicates whether the object's yinyang value is valid.
+    /// </summary>
+    /// <param name="qi">The yinyang value of the object to test.</param>
+    /// <param name="yinji">The yinyang value of the object's yinji threshold to test.</param>
+    /// <param name="yangji">The yinyang value of the object's yangji threshold to test.</param>
+    /// <returns><c>true</c> if the object's yinyang value is valid; otherwise, <c>false</c>.</returns>
+    public static bool IsQiValid(int qi, int yinji, int yangji) => (yinji <= qi) && (qi <= yangji);
 
     /// <summary>
     /// Attempts to set the object's yinyang threshold values.
