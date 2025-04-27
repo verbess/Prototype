@@ -14,12 +14,27 @@ public record ItemData : IKeyed
     /// <param name="key">The unique identifier of the item.</param>
     /// <param name="name">The name of the item.</param>
     /// <param name="description">The description of the item.</param>
+    /// <param name="types">The item types of the item.</param>
+    /// <param name="price">The price of the item.</param>
     /// <param name="qi">The yinyang value of the item.</param>
     /// <param name="yinji">The yinyang value of the item's yinji threshold.</param>
     /// <param name="yinchi">The yinyang value of the item's yinchi threshold.</param>
     /// <param name="yangchi">The yinyang value of the item's yangchi threshold.</param>
     /// <param name="yangji">The yinyang value of the item's yangji threshold.</param>
-    public ItemData(string key, string name, string description, int qi, int yinji, int yinchi, int yangchi, int yangji)
+    /// <param name="originalPolarity">The original polarity of the item.</param>
+    public ItemData(
+        string key,
+        string name,
+        string description,
+        ItemTypes types,
+        int price,
+        int qi,
+        int yinji,
+        int yinchi,
+        int yangchi,
+        int yangji,
+        Polarity originalPolarity
+    )
     {
         ArgumentNullException.ThrowIfNull(key);
         ArgumentNullException.ThrowIfNull(name);
@@ -37,11 +52,14 @@ public record ItemData : IKeyed
         Key = key;
         Name = name;
         Description = description;
+        Types = types;
+        Price = price;
         Qi = qi;
         Yinchi = yinchi;
         Yangchi = yangchi;
         Yinji = yinji;
         Yangji = yangji;
+        OriginalPolarity = originalPolarity;
     }
 
     /// <summary>
@@ -60,14 +78,14 @@ public record ItemData : IKeyed
     public string Description { get; }
 
     /// <summary>
-    /// Gets or initializes the item types of the item.
+    /// Gets the item types of the item.
     /// </summary>
-    public required ItemTypes Types { get; init; }
+    public ItemTypes Types { get; }
 
     /// <summary>
-    /// Gets or initializes the price of the item.
+    /// Gets the price of the item.
     /// </summary>
-    public required int Price { get; init; }
+    public int Price { get; }
 
     /// <summary>
     /// Gets the yinyang value of the item.
@@ -95,7 +113,7 @@ public record ItemData : IKeyed
     public int Yangji { get; }
 
     /// <summary>
-    /// Gets or initializes the original polarity of the item.
+    /// Gets the original polarity of the item.
     /// </summary>
-    public required Polarity OriginalPolarity { get; init; }
+    public Polarity OriginalPolarity { get; }
 }
