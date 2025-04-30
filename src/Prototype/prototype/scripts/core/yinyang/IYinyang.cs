@@ -23,7 +23,7 @@ public interface IYinyang
     public int Qi { get; set; }
 
     /// <summary>
-    /// Gets the yinyang value of the object's yinchi threshold.
+    /// Gets the <see cref="Qi"/> of the object's yinchi threshold.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -35,7 +35,7 @@ public interface IYinyang
     public int Yinchi { get; }
 
     /// <summary>
-    /// Gets the yinyang value of the object's yangchi threshold.
+    /// Gets the <see cref="Qi"/> of the object's yangchi threshold.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -47,7 +47,7 @@ public interface IYinyang
     public int Yangchi { get; }
 
     /// <summary>
-    /// Gets the yinyang value of the object's yinji threshold.
+    /// Gets the <see cref="Qi"/> of the object's yinji threshold.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -59,7 +59,7 @@ public interface IYinyang
     public int Yinji { get; }
 
     /// <summary>
-    /// Gets the yinyang value of the object's yangji threshold.
+    /// Gets the <see cref="Qi"/> of the object's yangji threshold.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -86,34 +86,32 @@ public interface IYinyang
         };
 
     /// <summary>
-    /// Indicates whether the object's yinyang threshold values are valid.
+    /// Indicates whether the object's threshold values are valid.
     /// </summary>
     /// <param name="yinji">The <see cref="Qi"/> of the object's yinji threshold to test.</param>
-    /// <param name="yinchi">The yinyang value of the object's yinchi threshold to test.</param>
-    /// <param name="yangchi">The yinyang value of the object's yangchi threshold to test.</param>
-    /// <param name="yangji">The yinyang value of the object's yangji threshold to test.</param>
-    /// <returns><c>true</c> if the object's yinyang threshold values are valid; otherwise, <c>false</c>.</returns>
+    /// <param name="yinchi">The <see cref="Qi"/> of the object's yinchi threshold to test.</param>
+    /// <param name="yangchi">The <see cref="Qi"/> of the object's yangchi threshold to test.</param>
+    /// <param name="yangji">The <see cref="Qi"/> of the object's yangji threshold to test.</param>
+    /// <returns><c>true</c> if the object's threshold values are valid; otherwise, <c>false</c>.</returns>
     public static bool AreThresholdsValid(int yinji, int yinchi, int yangchi, int yangji) =>
         (yinji <= yinchi) && (yinchi <= TaijiQi) && (TaijiQi <= yangchi) && (yangchi <= yangji);
 
     /// <summary>
-    /// Indicates whether the object's yinyang value is valid.
+    /// Indicates whether the object's <see cref="Qi"/> is valid.
     /// </summary>
-    /// <param name="qi">The yinyang value of the object to test.</param>
-    /// <param name="yinji">The yinyang value of the object's yinji threshold to test.</param>
-    /// <param name="yangji">The yinyang value of the object's yangji threshold to test.</param>
-    /// <returns><c>true</c> if the object's yinyang value is valid; otherwise, <c>false</c>.</returns>
+    /// <param name="qi">The <see cref="Qi"/> of the object to test.</param>
+    /// <param name="yinji">The <see cref="Qi"/> of the object's yinji threshold to test.</param>
+    /// <param name="yangji">The <see cref="Qi"/> of the object's yangji threshold to test.</param>
+    /// <returns><c>true</c> if the object's <see cref="Qi"/> is valid; otherwise, <c>false</c>.</returns>
     public static bool IsQiValid(int qi, int yinji, int yangji) => (yinji <= qi) && (qi <= yangji);
 
     /// <summary>
-    /// Attempts to set the object's yinyang threshold values.
+    /// Attempts to set the object's threshold values.
     /// </summary>
-    /// <param name="yinji">The yinyang value of the object's yinji threshold to set.</param>
-    /// <param name="yinchi">The yinyang value of the object's yinchi threshold to set.</param>
-    /// <param name="yangchi">The yinyang value of the object's yangchi threshold to set.</param>
-    /// <param name="yangji">The yinyang value of the object's yangji threshold to set.</param>
-    /// <returns>
-    /// <c>true</c> if the yinyang threshold values were set successfully; otherwise, <c>false</c>.
-    /// </returns>
+    /// <param name="yinji">The <see cref="Qi"/> of the object's yinji threshold to set.</param>
+    /// <param name="yinchi">The <see cref="Qi"/> of the object's yinchi threshold to set.</param>
+    /// <param name="yangchi">The <see cref="Qi"/> of the object's yangchi threshold to set.</param>
+    /// <param name="yangji">The <see cref="Qi"/> of the object's yangji threshold to set.</param>
+    /// <returns><c>true</c> if the threshold values were set successfully; otherwise, <c>false</c>.</returns>
     public bool TrySetThresholds(int yinji, int yinchi, int yangchi, int yangji);
 }
