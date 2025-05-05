@@ -38,7 +38,11 @@ public enum ItemTypes
     /// The dan type. Value: 17, Binary: 0001_0001.
     /// </summary>
     /// <remarks>
-    /// 丹，是道教炼丹术的产物，以此追求长生不老，增益灵力，或获取超凡之力。
+    /// <para>
+    /// Dan, forged from the primal essence of heaven and earth, embodies the mysteries of Daoist alchemy. Consumed, it
+    /// augments spiritual force, prolongs life, and may lead to transcendence.
+    /// </para>
+    /// <para>丹，炼自天地灵气，凝道教玄妙，服之可增益灵力，延寿续命，乃至超凡入圣。</para>
     /// </remarks>
     Dan = (1 << 4) | Consumable,
 
@@ -46,7 +50,11 @@ public enum ItemTypes
     /// The fulu type. Value: 33, Binary: 0010_0001.
     /// </summary>
     /// <remarks>
-    /// 符箓，是符篆和法箓的合称，道士以符箓召神劾鬼，趋吉避凶，降妖镇魔，治病除灾。
+    /// <para>
+    /// Fulu, the vessel of Daoist magic, inscribed with charms to summon spirits, banish demons, attract fortune, and
+    /// avert calamity, safeguarding practitioners in peril.
+    /// </para>
+    /// <para>符箓，道法之载体，书符召神，驱鬼镇魔，趋吉避凶，护修行者于危难。</para>
     /// </remarks>
     Fulu = (1 << 5) | Consumable,
     #endregion
