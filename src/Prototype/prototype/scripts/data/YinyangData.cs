@@ -8,16 +8,17 @@ namespace Yinyang.Data;
 public sealed record YinyangData : IKeyed
 {
     /// <summary>
-    ///
+    /// Initializes a new instance of this class with the specified properties.
     /// </summary>
-    /// <param name="key"></param>
-    /// <param name="qi"></param>
-    /// <param name="yinchi"></param>
-    /// <param name="yangchi"></param>
-    /// <param name="yinji"></param>
-    /// <param name="yangji"></param>
-    /// <param name="originalPolarity"></param>
-    public YinyangData(string key, int qi, int yinchi, int yangchi, int yinji, int yangji, Polarity originalPolarity)
+    /// <param name="key">The unique identifier of the data.</param>
+    /// <param name="yinji">The <see cref="Qi"/> of the object's yinji threshold.</param>
+    /// <param name="yinchi">The <see cref="Qi"/> of the object's yinchi threshold.</param>
+    /// <param name="yangchi">The <see cref="Qi"/> of the object's yangchi threshold.</param>
+    /// <param name="yangji">The <see cref="Qi"/> of the object's yangji threshold.</param>
+    /// <param name="qi">The yinyang value of the object.</param>
+    /// <param name="originalPolarity">The original polarity of the object.</param>
+
+    public YinyangData(string key, int yinji, int yinchi, int yangchi, int yangji, int qi, Polarity originalPolarity)
     {
         ArgumentNullException.ThrowIfNull(key);
         if (!IYinyang.AreThresholdsValid(yinji, yinchi, yangchi, yangji))
@@ -31,46 +32,32 @@ public sealed record YinyangData : IKeyed
         }
 
         Key = key;
-        Qi = qi;
+        Yinji = yinji;
         Yinchi = yinchi;
         Yangchi = yangchi;
-        Yinji = yinji;
         Yangji = yangji;
+        Qi = qi;
         OriginalPolarity = originalPolarity;
     }
 
-    /// <summary>
-    ///
-    /// </summary>
+    /// <inheritdoc cref="IKeyed.Key"/>
     public string Key { get; }
 
-    /// <summary>
-    ///
-    /// </summary>
+    /// <inheritdoc cref="IYinyang.Qi"/>
     public int Qi { get; }
 
-    /// <summary>
-    ///
-    /// </summary>
+    /// <inheritdoc cref="IYinyang.Yinchi"/>
     public int Yinchi { get; }
 
-    /// <summary>
-    ///
-    /// </summary>
+    /// <inheritdoc cref="IYinyang.Yangchi"/>
     public int Yangchi { get; }
 
-    /// <summary>
-    ///
-    /// </summary>
+    /// <inheritdoc cref="IYinyang.Yinji"/>
     public int Yinji { get; }
 
-    /// <summary>
-    ///
-    /// </summary>
+    /// <inheritdoc cref="IYinyang.Yangji"/>
     public int Yangji { get; }
 
-    /// <summary>
-    ///
-    /// </summary>
+    /// <inheritdoc cref="IYinyang.OriginalPolarity"/>
     public Polarity OriginalPolarity { get; }
 }
